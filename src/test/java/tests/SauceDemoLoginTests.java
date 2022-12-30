@@ -1,6 +1,8 @@
 package tests;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -25,7 +27,7 @@ public class SauceDemoLoginTests {
 		page.loginButton.click();
 		
 		Thread.sleep(1000);
-		Assert.assertTrue(page.errorMessage.getText().contains("Epic sadface:"));
+		AssertJUnit.assertTrue(page.errorMessage.getText().contains("Epic sadface:"));
 	}
 	
 	@DataProvider
